@@ -1,0 +1,34 @@
+{% extends "cms/base.html" %}
+{% block title %}メンバーの一覧{% endblock title %}
+
+
+{% block content %}
+    <h4 class="mt-4 border-bottom">メンバーの一覧</h4>
+    <a href="{% url 'cms:member_add' %}" class="btn btn-primary btn-sm my-3">追加</a>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">メンバー名</th>
+                <th scope="col">所属</th>
+                <th scope="col">性別</th>
+                <th scope="col">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+            <tr>
+                <th scope="row">{{ member.id }}</th>
+                <td>{{ member.name }}</td>
+                <td>{{ member.div }}</td>
+                <td>{{ member.sex }}</td>
+                <td>
+                    <a href="{% url 'cms:member_mod' member_id=member.id %}" class="btn btn-outline-primary btn-sm">修正</a>
+                    <a href="{% url 'cms:member_del' member_id=member.id %}" class="btn btn-outline-danger btn-sm">削除</a>
+                    <a href="{% url 'cms:attribute_list' member_id=member.id %}" class="btn btn-outline-info btn-sm">属性の一覧</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
