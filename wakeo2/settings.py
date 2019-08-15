@@ -134,7 +134,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Perse database configuration from $DATABASE_URL
 import dj_database_url
-db_from_env = dj_database_url.config
+db_from_env = dj_database_url.config()
+DATABASES['dafault'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
