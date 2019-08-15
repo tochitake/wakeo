@@ -25,7 +25,8 @@ SECRET_KEY = '3jf5*glqz$y$b0j0_@zet(k78tbsbn(8jqb+7py6%hk5w2^m=y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOW ALL HOST HEADER
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,3 +123,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Static Asset configuration
+import os
+BASE_DIR =  os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+
+# Perse database configuration from $DATABASE_URL
+import dj_database_url
+db_from_env = dj_database_url.config
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
