@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c8d0b61-14cd-46c8-b803-ee789087e6c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="3c8d0b61-14cd-46c8-b803-ee789087e6c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +78,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wakeo2/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="140" column="61" lean-forward="true" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
+            <state relative-caret-position="615">
+              <caret line="139" column="37" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wakeo2/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -122,8 +129,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="338" />
-    <option name="y" value="42" />
+    <option name="x" value="5" />
+    <option name="y" value="67" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -238,15 +245,15 @@
       <option name="presentableId" value="Default" />
       <updated>1565508195904</updated>
       <workItem from="1565508197569" duration="20944000" />
-      <workItem from="1565842284169" duration="4255000" />
+      <workItem from="1565842284169" duration="4804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25199000" />
+    <option name="totallyTimeSpent" value="25748000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="5" y="67" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
@@ -405,13 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wakeo2/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cms/templates/cms/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -421,8 +421,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wakeo2/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="140" column="61" lean-forward="true" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
+        <state relative-caret-position="615">
+          <caret line="139" column="37" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wakeo2/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
