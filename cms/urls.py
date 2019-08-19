@@ -12,4 +12,5 @@ urlpatterns = [
     path('attribute/add/<int:member_id>/', views.attribute_edit, name='attribute_add'),
     path('attribute/mod/<int:member_id>/<int:attribute_id>/', views.attribute_edit, name='attribute_mod'),
     path('attribute/del/<int:member_id>/<int:attribute_id>/', views.attribute_del, name='attribute_del'),
+    path('team/', views.team_member_list, name='team_member_list'),
 ]

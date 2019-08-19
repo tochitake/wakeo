@@ -4,6 +4,7 @@ from django.views.generic.list import ListView
 
 from cms.models import Member, attribute
 from cms.forms import MemberForm, attributeForm
+import random
 
 
 
@@ -66,6 +67,22 @@ def attribute_del(request, member_id, attribute_id):
     attributes = get_object_or_404(attribute, pk=attribute_id)
     attributes.delete()
     return redirect('cms:attribute_list', member_id=member_id)
+
+
+
+def team_member_list(request):
+    # return HttpResponse('チーム分けされたメンバー名の一覧')
+    members = Member.objects.all().order_by('team')
+    i = 0
+    for member in members:
+        i = random.randint(1,2)
+        member.team = i
+        member.save()
+
+
+    return render(request, 'cms/team_member_list.html',
+                  {'members': members})
+
 
 
 
