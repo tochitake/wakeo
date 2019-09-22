@@ -153,7 +153,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="72" />
+    <option name="x" value="582" />
+    <option name="y" value="255" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -291,16 +292,15 @@
       <workItem from="1565842284169" duration="4804000" />
       <workItem from="1565964512022" duration="26719000" />
       <workItem from="1568710527682" duration="6060000" />
-      <workItem from="1569027237856" duration="11775000" />
+      <workItem from="1569027237856" duration="12111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70302000" />
+    <option name="totallyTimeSpent" value="70638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="416" y="66" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="582" y="255" width="1440" height="877" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49908593" visible="true" weight="0.19742489" />
       <window_info id="Structure" order="1" sideWeight="0.5009141" side_tool="true" weight="0.19170243" />
@@ -518,16 +518,16 @@
     <entry file="file://$PROJECT_DIR$/cms/migrations/0002_auto_20190921_1014.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/cms/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cms/migrations/0003_auto_20190921_1710.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cms/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cms/templates/cms/page_list.html">
