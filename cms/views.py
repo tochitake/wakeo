@@ -1,16 +1,56 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponse
 from django.views.generic.list import ListView
+from django.http import HttpResponse, HttpResponseRedirect
 
-from cms.models import Member, attribute
-from cms.forms import MemberForm, attributeForm
+from cms.makeSerialCd import MakeRndCode
+from cms.models import Member, attribute, Page
+from cms.forms import MemberForm, attributeForm, PageForm
 import random
 
+
+def page_create(request, page_id=None):
+
+    if page_id:
+        page = get_object_or_404(Page, pk=page_id)
+    else:
+        page = Page()
+
+    if request.method == 'POST':
+        form = PageForm(request.POST, instance=page)
+        serial = MakeRndCode()
+        serialCd = serial.mkrnd()
+        if form.is_valid():
+            page = form.save(commit=False)
+            page.serialcd = serialCd
+            response = HttpResponse('test')
+            response.set_cookie('serial_cd', serialCd)
+            page.save()
+            return redirect('cms:member_list')
+    else:
+        form = PageForm(instance=page)
+
+
+    #初回きた時はGetなので、そのままindexを渡す
+    #POSTでリクエストがきたら、Saveして、メンバーリストに飛ばす
+    #ここからはクッキーでIDを渡す
+    #DBにはPageIDを持つ
+
+    return render(request, 'cms/index.html', dict(form=form))
+
+
+def page_list(request):
+    pages = Page.objects.all().order_by('id')
+    return render(request, 'cms/page_list.html',
+                  {'pages': pages})
 
 
 def member_list(request):
     # return HttpResponse('メンバー名の一覧')
-    members = Member.objects.all().order_by('id')
+    # members = Member.objects.all().order_by('id')
+    serialCd = request.COOKIES['serial_cd']
+#    response = HttpResponse('Test')
+#    response.set_cookie('serial_cd', serialCd)
+    members = Member.objects.filter(serialcd = serialCd).order_by('id')
     return render(request, 'cms/member_list.html',
                   {'members': members})
 
@@ -24,8 +64,13 @@ def member_edit(request, member_id=None):
 
     if request.method == 'POST':
         form = MemberForm(request.POST, instance=member)
+
         if form.is_valid():
             member = form.save(commit=False)
+            serialCd = request.COOKIES['serial_cd']
+            member.serialcd = serialCd
+            response = HttpResponse('Test')
+            response.set_cookie('serial_cd', serialCd)
             member.save()
             return redirect('cms:member_list')
     else:

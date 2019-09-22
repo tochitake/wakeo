@@ -13,6 +13,7 @@
                 <th scope="col">メンバー名</th>
                 <th scope="col">所属</th>
                 <th scope="col">性別</th>
+                <th scope="col">シリアルNo</th>
                 <th scope="col">操作</th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
                 <td>{{ member.name }}</td>
                 <td>{{ member.div }}</td>
                 <td>{{ member.sex }}</td>
+                <td>{{ member.serialcd }}</td>
                 <td>
                     <a href="{% url 'cms:member_mod' member_id=member.id %}" class="btn btn-outline-primary btn-sm">修正</a>
                     <a href="{% url 'cms:member_del' member_id=member.id %}" class="btn btn-outline-danger btn-sm">削除</a>

@@ -1,0 +1,16 @@
+{% extends "cms/base.html" %}
+{% load bootstrap4 %}
+{% block title %}チーム分けしますよ{% endblock title %}
+
+
+{% block content %}
+    <h1 class="mt-4 border-bottom">まずは準備します。</h1>
+    <h1 class="mt-4 border-bottom">STEP1.イベント名を入力してね。</h1>
+    <form action="{% url 'cms:page_create' %}" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
+        <div>
+            <button type="submit" class="btn btn-primary">送信</button>
+        </div>
+    </form>
+{% endblock content %}
