@@ -138,7 +138,9 @@ def attribute_del(request, member_id, attribute_id):
 
 def team_member_list(request):
     # return HttpResponse('チーム分けされたメンバー名の一覧')
-    members = Member.objects.all().order_by('team')
+    #members = Member.objects.all().order_by('team')
+    serialCd = request.GET.get("S")
+    members = Member.objects.filter(serialcd = serialCd).order_by('team')
     i = 0
     for member in members:
         i = random.randint(1,2)
@@ -147,7 +149,8 @@ def team_member_list(request):
 
 
     return render(request, 'cms/team_member_list.html',
-                  {'members': members})
+                  #{'members': members}
+                  dict(members=members, S=serialCd))
 
 
 
