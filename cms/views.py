@@ -26,7 +26,9 @@ def page_create(request, page_id=None):
             #response = HttpResponse('test')
             response = redirect('cms:member_list')
             response['location'] += '?S=' + serialCd
+
             #response.set_cookie('serial_cd', serialCd)
+
             page.save()
             #return redirect('cms:member_list')
             #return render(request, 'cms/member_list.html')
