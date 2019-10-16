@@ -22,10 +22,15 @@ def page_create(request, page_id=None):
         if form.is_valid():
             page = form.save(commit=False)
             page.serialcd = serialCd
-            response = HttpResponse('test')
-            response.set_cookie('serial_cd', serialCd)
+
+            #response = HttpResponse('test')
+            response = redirect('cms:member_list')
+            response['location'] += '?S=' + serialCd
+            #response.set_cookie('serial_cd', serialCd)
             page.save()
-            return redirect('cms:member_list')
+            #return redirect('cms:member_list')
+            #return render(request, 'cms/member_list.html')
+            return response
     else:
         form = PageForm(instance=page)
 
@@ -47,12 +52,14 @@ def page_list(request):
 def member_list(request):
     # return HttpResponse('メンバー名の一覧')
     # members = Member.objects.all().order_by('id')
-    serialCd = request.COOKIES['serial_cd']
+    #serialCd = request.COOKIES['serial_cd']
+    serialCd = request.GET.get("S")
 #    response = HttpResponse('Test')
 #    response.set_cookie('serial_cd', serialCd)
     members = Member.objects.filter(serialcd = serialCd).order_by('id')
     return render(request, 'cms/member_list.html',
-                  {'members': members})
+                  dict(members=members, S=serialCd))
+                  #{'members': members})
 
 
 def member_edit(request, member_id=None):
@@ -62,28 +69,40 @@ def member_edit(request, member_id=None):
     else:
         member = Member()
 
+    serialCd = request.GET.get("S")
+
     if request.method == 'POST':
         form = MemberForm(request.POST, instance=member)
 
         if form.is_valid():
             member = form.save(commit=False)
-            serialCd = request.COOKIES['serial_cd']
+            #serialCd = request.COOKIES['serial_cd']
+            #serialCd = request.GET.get("S")
             member.serialcd = serialCd
-            response = HttpResponse('Test')
-            response.set_cookie('serial_cd', serialCd)
+            #response = HttpResponse('Test')
+            #response.set_cookie('serial_cd', serialCd)
+            response = redirect('cms:member_list')
+            response['location'] += '?S=' + serialCd
             member.save()
-            return redirect('cms:member_list')
+            #return redirect('cms:member_list')
+            #return render(request, 'cms/member_list.html')
+            return response
     else:
         form = MemberForm(instance=member)
 
-    return render(request, 'cms/member_edit.html', dict(form=form, member_id=member_id))
+    return render(request, 'cms/member_edit.html', dict(form=form, member_id=member_id, S=serialCd))
 
 
 def member_del(request, member_id):
     # return HttpResponse('メンバーの削除')
     member = get_object_or_404(Member, pk=member_id)
     member.delete()
-    return redirect('cms:member_list')
+    serialCd = request.GET.get("S")
+    members = Member.objects.filter(serialcd = serialCd).order_by('id')
+    return render(request, 'cms/member_list.html',
+                  dict(members=members, S=serialCd))
+                  #{'members': members})
+    #return redirect('cms:member_list')
 
 
 def attribute_edit(request, member_id, attribute_id=None):

@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='member',
             name='rel',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='Members', to='cms.Page', verbose_name=''),
+            field=models.ForeignKey(default='A', on_delete=django.db.models.deletion.CASCADE, related_name='Members', to='cms.Page', verbose_name=''),
         ),
     ]
