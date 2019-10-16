@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c8d0b61-14cd-46c8-b803-ee789087e6c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/migrations/0003_auto_20190921_1710.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/migrations/0003_auto_20190921_1710.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/cms/member_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/cms/templates/cms/member_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/cms/member_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cms/templates/cms/member_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="3c8d0b61-14cd-46c8-b803-ee789087e6c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,12 +333,12 @@
       <workItem from="1565964512022" duration="26719000" />
       <workItem from="1568710527682" duration="6060000" />
       <workItem from="1569027237856" duration="21700000" />
-      <workItem from="1570926965104" duration="3498000" />
+      <workItem from="1570926965104" duration="3560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83725000" />
+    <option name="totallyTimeSpent" value="83787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="135" width="1440" height="877" extended-state="0" />
