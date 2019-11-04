@@ -1,0 +1,37 @@
+
+h3 {
+  position: relative;
+  background: #dfefff;
+  box-shadow: 0px 0px 0px 5px #dfefff;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+  color: #454545;
+}
+
+h3:after {
+  position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #fff #fff #a8d4ff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.title-label005{
+	color: #ffffff;
+	background-color:#7986cb;
+}
+
+.title img{
+	padding:1em;
+}
+.title{
+	width: 100%;
+	background:
+	 linear-gradient(90deg, #ffffff 0.2em, transparent 0),
+	 linear-gradient(90deg, #28a745 50%, transparent 0),
+	 linear-gradient(90deg, #20c997 50%, #c3e6cb 0);
+	background-size: 20px,40px,80px;
+}

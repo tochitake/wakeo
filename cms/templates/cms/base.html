@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width", intial-scale=1, shrink-to-fit="no">
     <link rel="stylesheet" href="{% static 'cms/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cms/css/wakeo.css' %}">
     {% block extra_css %}{% endblock %}
     <title>{% block title %}My Members{% endblock %}</title>
 </head>
 <body>
+    <div class="title">
+        <img class="header-logo-img" src="{% static 'cms/img/title.png' %}" >
+    </div>
     <div class="container">
         {% block content %}
             {{ content }}
