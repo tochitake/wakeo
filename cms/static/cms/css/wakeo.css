@@ -31,7 +31,11 @@ h3:after {
 	width: 100%;
 	background:
 	 linear-gradient(90deg, #ffffff 0.2em, transparent 0),
-	 linear-gradient(90deg, #28a745 50%, transparent 0),
+	 linear-gradient(90deg, #b3d7ff 50%, transparent 0),
 	 linear-gradient(90deg, #20c997 50%, #c3e6cb 0);
 	background-size: 20px,40px,80px;
+}
+
+.header-logo-img2{
+	background-color: transparent;
 }
