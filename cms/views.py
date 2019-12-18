@@ -148,6 +148,7 @@ def team_member_list(request):
         member.save()
 
 
+
     return render(request, 'cms/team_member_list.html',
                   #{'members': members}
                   dict(members=members, S=serialCd))
