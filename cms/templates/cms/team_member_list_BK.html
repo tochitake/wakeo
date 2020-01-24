@@ -1,26 +1,8 @@
 {% extends "cms/base.html" %}
-{% load static %}
-
 {% block title %}チーム分けされたメンバーの一覧{% endblock title %}
 
+
 {% block content %}
-<style type="text/css">
-<!--
-.box14{
-    padding: 0.2em 0.5em;
-    margin: 2em 0;
-    background: #d6ebff;
-    box-shadow: 0px 0px 0px 10px #d6ebff;
-    border: dashed 2px white;
-}
-
-.box14 p {
-    margin: 0;
-    padding: 0;
-}
--->
-</style>
-
     <h4 class="mt-4 border-bottom">チーム分けされたメンバーの一覧</h4>
     <a href="{% url 'cms:team_member_list' %}?S={{ S }}" class="btn btn-primary btn-sm my-3">シャッフル</a>
     <input type="button" value="メンバー追加" onclick="addInputText();">
@@ -29,8 +11,8 @@
         <br/>
         <div id="app" class="container" cmanOMat="area">
             {% for team in teams %}
-                <div id="{{ team.team }}" class="box14">
-                    <label>チーム{{ team.team }}</label>
+                <div id="{{ team.team }}">
+                    <label>{{ team.team }}</label>
                         {% for member in members %}
                             {% ifequal member.team team.team %}
                                 <input name="name_text" type="text" value="{{ member.name }}" readonly="readonly" cmanOMat="move" /><br/>
@@ -38,6 +20,13 @@
                         {% endfor %}
                 </div>
             {% endfor %}
+        </div>
+        <div>
+            <fieldset id="app2" cmanOMat="move">
+                <legend>ラベル</legend>
+                <input name="name_text" type="text"><br/><br/><br/><br/>
+                <input name="name_text" type="text">
+            </fieldset>
         </div>
         <script type="text/javascript" src="../../static/cms/js/allsite.js"></script>
 {% endblock content %}

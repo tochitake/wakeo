@@ -3,7 +3,7 @@ from django.views.generic.list import ListView
 from django.http import HttpResponse, HttpResponseRedirect
 
 from cms.makeSerialCd import MakeRndCode
-from cms.models import Member, attribute, Page
+from cms.models import Member, attribute, Page, Team
 from cms.forms import MemberForm, attributeForm, PageForm
 import random
 
@@ -137,21 +137,38 @@ def attribute_del(request, member_id, attribute_id):
 
 
 def team_member_list(request):
-    # return HttpResponse('チーム分けされたメンバー名の一覧')
     #members = Member.objects.all().order_by('team')
     serialCd = request.GET.get("S")
     members = Member.objects.filter(serialcd = serialCd).order_by('team')
-    i = 0
+    teams = Team.objects.filter(serialcd=serialCd).order_by('team')
+
+    if teams.first() is None:
+        team = Team()
+
+        # チームを設定
+        i = 0
+        j = 1
+        team_count = 3 # 一時的に定数とする
+        # そのうち外だしロジック（REST_API）を呼び出す形にする
+        while j <= team_count:
+            team = Team()
+            team.team = j
+            team.serialcd = serialCd
+            team.name = j
+            team.save()
+            j+=1
+
+        teams = Team.objects.filter(serialcd=serialCd).order_by('team')
+
+
     for member in members:
-        i = random.randint(1,2)
+        i = random.randint(1,3)
         member.team = i
         member.save()
 
 
-
     return render(request, 'cms/team_member_list.html',
-                  #{'members': members}
-                  dict(members=members, S=serialCd))
+                  dict(members=members, teams=teams, S=serialCd))
 
 
 

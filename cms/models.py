@@ -22,6 +22,13 @@ class Member(models.Model):
     def __str__(self):
         return self.name
 
+class Team(models.Model):
+    name = models.CharField('チーム名', max_length=255)
+    serialcd = models.CharField('シリアルコード', max_length=255, blank=True)
+    team = models.IntegerField('チーム', blank=True, default=0)
+
+    def __str__(self):
+        return self.name
 
 class attribute(models.Model):
     rel = models.ForeignKey(Member, verbose_name='', related_name='attributes', on_delete=models.CASCADE)

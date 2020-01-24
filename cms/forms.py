@@ -11,7 +11,7 @@ class PageForm(ModelForm):
 class MemberForm(ModelForm):
     class Meta:
         model = Member
-        fields = ('name', 'div', 'sex',)
+        fields = ('name', 'div', 'sex', 'team')
 
 
 class attributeForm(ModelForm):

@@ -46,7 +46,7 @@ var cmanOM_OyaObj = [];
 function cmanOM_JS_init() {
 
     // 対象のタグ（追加すれば移動対象となる）
-    var wTargetTag = ['img', 'div', 'input', 'canvas'];
+    var wTargetTag = ['img', 'div', 'input', 'canvas', 'fieldset'];
     var wTagList = [];
     var wObjAt;
 
@@ -332,7 +332,17 @@ function addInputText() {
     const inputFirst = document.createElement('input');
     inputFirst.setAttribute('type', 'text');
     inputFirst.setAttribute('cmanOMat', 'move');
-    inputFirst.setAttribute('name', 'textbox1');
+    inputFirst.setAttribute('name', 'name_text');
+    el1.insertBefore(inputFirst, el1.firstChild);
+    cmanOM_JS_init();
+}
+
+function addInputText2() {
+    const el1 = document.getElementById('app2');
+    const inputFirst = document.createElement('input');
+    inputFirst.setAttribute('type', 'text');
+    inputFirst.setAttribute('cmanOMat', 'move');
+    inputFirst.setAttribute('name', 'name_text');
     el1.insertBefore(inputFirst, el1.firstChild);
     cmanOM_JS_init();
 }
