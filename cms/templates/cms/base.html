@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width", intial-scale=1, shrink-to-fit="no">
     <link rel="stylesheet" href="{% static 'cms/css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'cms/css/wakeo.css' %}">
+
     {% block extra_css %}{% endblock %}
     <title>{% block title %}My Members{% endblock %}</title>
 </head>
@@ -21,6 +22,8 @@
     </div>
 <script src="{% static 'cms/js/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'cms/js/bootstrap.bundle.min.js' %}"></script>
-{% block extra_js %}{% endblock %}
+<script type="text/javascript" src="../../static/cms/js/allsite.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+{% block extrajs %}{% endblock %}
 </body>
 </html>

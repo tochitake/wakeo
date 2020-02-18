@@ -3,6 +3,7 @@ from django.views.generic.list import ListView
 from django.http import HttpResponse, HttpResponseRedirect
 
 from cms.makeSerialCd import MakeRndCode
+from cms.TeamDiv import makeTeamDiv
 from cms.models import Member, attribute, Page, Team
 from cms.forms import MemberForm, attributeForm, PageForm
 import random
@@ -25,7 +26,7 @@ def page_create(request, page_id=None):
 
             #response = HttpResponse('test')
             response = redirect('cms:member_list')
-            response['location'] += '?S=' + serialCd
+            response['location'] += '?S=' + serialCd + '&case=1'
 
             #response.set_cookie('serial_cd', serialCd)
 
@@ -58,10 +59,32 @@ def member_list(request):
     serialCd = request.GET.get("S")
 #    response = HttpResponse('Test')
 #    response.set_cookie('serial_cd', serialCd)
+
+    case = request.GET.get("case")
+    team_count = request.GET.get("team_cnt")
+    member_count = request.GET.get("member_cnt")
+    if case:
+        a = 1
+    else:
+        case = '1'
+
+    #チーム数初期値
+    if team_count:
+        a = 1
+    else:
+        team_count = '2'
+
+    #メンバー数初期値
+    if member_count:
+        a = 1
+    else:
+        member_count = '2'
+
+
     members = Member.objects.filter(serialcd = serialCd).order_by('id')
+    mcnt = members.count()
     return render(request, 'cms/member_list.html',
-                  dict(members=members, S=serialCd))
-                  #{'members': members})
+                  dict(members=members, S=serialCd, mcnt=mcnt, case=case, team_cnt=team_count, member_cnt=member_count))
 
 
 def member_edit(request, member_id=None):
@@ -139,36 +162,45 @@ def attribute_del(request, member_id, attribute_id):
 def team_member_list(request):
     #members = Member.objects.all().order_by('team')
     serialCd = request.GET.get("S")
-    members = Member.objects.filter(serialcd = serialCd).order_by('team')
-    teams = Team.objects.filter(serialcd=serialCd).order_by('team')
+    team_count = int(request.POST.get("team_count"))
+    member_count = int(request.POST.get("member_count"))
+    case = request.POST.get("case")
+    check_Alter = request.POST.get("check_Alter")
 
-    if teams.first() is None:
-        team = Team()
+#    members = Member.objects.filter(serialcd = serialCd)
+#    teams = Team.objects.filter(serialcd=serialCd).order_by('team')
+#    member_all_count = members.count()
 
-        # チームを設定
-        i = 0
-        j = 1
-        team_count = 3 # 一時的に定数とする
-        # そのうち外だしロジック（REST_API）を呼び出す形にする
-        while j <= team_count:
-            team = Team()
-            team.team = j
-            team.serialcd = serialCd
-            team.name = j
-            team.save()
-            j+=1
+#    if teams.first() is None:
+        #team = Team()
+#    teams.delete()
 
-        teams = Team.objects.filter(serialcd=serialCd).order_by('team')
+    mkModel = makeTeamDiv(team_count, member_count, serialCd, case)
+    teams, team_count = mkModel.doTeamSet()
 
+    # メンバー数を決める場合
+#    if case == "3":
+#        team_count,mod = divmod(member_all_count,member_count)
+        #if team_count == 0:
+    # ペアの場合
+#    elif case == "1":
+#        team_count, mod = divmod(member_all_count, 2)
 
-    for member in members:
-        i = random.randint(1,3)
-        member.team = i
-        member.save()
+    if check_Alter:
+        members = mkModel.doTeamDivOnCondition01()
+    else:
+        members = mkModel.doTeamDiv()
 
+#    for member in members:
+#        #暫定ロジック
+#        i = random.randint(1,team_count)
+#        member.team = i
+#        member.save()
+
+#ペアではない場合、チーム数、メンバー数は記憶しておく
 
     return render(request, 'cms/team_member_list.html',
-                  dict(members=members, teams=teams, S=serialCd))
+                  dict(members=members, teams=teams, S=serialCd, case=case, team_cnt=team_count, member_cnt=member_count))
 
 
 

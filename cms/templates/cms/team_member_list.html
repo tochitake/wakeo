@@ -20,12 +20,26 @@
 }
 -->
 </style>
+    <form id="member_list_form" action="{% url 'cms:team_member_list' %}?S={{ S }}" method="post">
+        <h4 class="mt-4 border-bottom">条件設定</h4>
+        <div>
+            <input type="radio" id="case_pair" name="case" onclick="funcPair()" value="1" {% if case == "1" %} checked {% endif %}>　ペアを決めるよ<br>
+            <input type="radio" id="case_team" name="case" onclick="funcTeam()"  value="2" {% if case == "2" %} checked {% endif %}>　チーム数を決めるよ<br>
+            <input type="radio" id="case_member" name="case" onclick="funcMember()"  value="3" {% if case == "3" %} checked {% endif %}>　1チーム何人かを決めるよ<br>
+            <div id="text01"><p><label>チーム数は？：<input type="number" size="10" min="1" id="valid_team_cnt" name="team_count" value="{{ team_cnt }}"></label></p></div>
+            <div id="text02"><p><label>１チーム何人？：<input type="number" size="10" min="1" id="valid_member_cnt" name="member_count" value="{{ member_cnt }}"></label></p></div>
+        </div>
+        <div>
+            <input type="checkbox" id="check_Alter_a" name="check_Alter" onclick="funcAlter()" value="1">男女できるだけ均等？<br/>
+        </div>
+        <button class="btn btn-primary btn-sm my-3" id="shuffle_confirm" type="submit">決定！！</button>
+        {% csrf_token %}
+    </form>
 
     <h4 class="mt-4 border-bottom">チーム分けされたメンバーの一覧</h4>
-    <a href="{% url 'cms:team_member_list' %}?S={{ S }}" class="btn btn-primary btn-sm my-3">シャッフル</a>
+    <!-- <a href="{% url 'cms:team_member_list' %}?S={{ S }}" class="btn btn-primary btn-sm my-3">シャッフル</a> -->
     <input type="button" value="メンバー追加" onclick="addInputText();">
-    <input type="button" value="メンバー追加2" onclick="addInputText2();">
-    <a href="{% url 'cms:member_list' %}?S={{ S }}" class="btn btn-secondary btn-sm">戻る</a>
+    <a href="{% url 'cms:member_list' %}?S={{ S }}&case={{ case }}" class="btn btn-secondary btn-sm">戻る</a>
         <br/>
         <div id="app" class="container" cmanOMat="area">
             {% for team in teams %}
@@ -39,5 +53,19 @@
                 </div>
             {% endfor %}
         </div>
-        <script type="text/javascript" src="../../static/cms/js/allsite.js"></script>
+
 {% endblock content %}
+
+{% block extrajs %}
+<script type="text/javascript">
+window.onload = function () {
+    if(document.getElementById( "case_pair" ).checked) {
+        funcPair();
+    } else if (document.getElementById( "case_team" ).checked) {
+        funcTeam();
+    } else if (document.getElementById( "case_member" ).checked) {
+        funcMember();
+    }
+}
+</script>
+{% endblock extrajs %}

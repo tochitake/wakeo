@@ -347,6 +347,7 @@ function addInputText2() {
     cmanOM_JS_init();
 }
 
+
 /*
 function onFileSelected(input) {
 
@@ -408,6 +409,7 @@ function posNow() {
 // =======================================================
 // ファイルアップロード
 // =======================================================
+/*
 var file = document.getElementById('file');
 var canvas = document.getElementById('canvas');
 var canvasWidth = 400;
@@ -460,4 +462,43 @@ function canvasDraw() {
         // Canvas上にテキストを表示
         addText();
     }
+}
+*/
+
+
+// jQuery
+/*$(function(){
+    $('[name="case"]:radio').change(function(){
+        if($('[id=case_team]').prop('checked')){
+            $('.text').fadeOut();
+            $('.text01').fadeIn();
+
+        } else if ($('[id=case_member]').prop('checked')) {
+            $('.text').fadeOut();
+            $('.text02').fadeIn();
+        } else if ($('[id=case_pair]').prop('checked')) {
+            $('.text').fadeOut();
+            $('.text02').fadeIn();
+        }
+        });
+    });
+    */
+
+function funcPair(){
+    document.getElementById("text01").style.display ="none";
+    document.getElementById("text02").style.display ="none";
+}
+
+function funcTeam(){
+    document.getElementById("text01").style.display ="block";
+    document.getElementById("text02").style.display ="none";
+}
+
+function funcMember(){
+    document.getElementById("text01").style.display ="none";
+    document.getElementById("text02").style.display ="block";
+}
+
+function ccccbbb(){
+    alert('ssssss');
 }

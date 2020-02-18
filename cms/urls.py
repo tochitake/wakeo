@@ -4,7 +4,7 @@ from cms import views
 
 app_name = 'cms'
 urlpatterns = [
-    path('top/', views.page_create, name='page_create'),
+    path('', views.page_create, name='page_create'),
     path('page/', views.page_list, name='page_list'),
     path('member/', views.member_list, name='member_list'),
     path('member/add/', views.member_edit, name='member_add'),
