@@ -2,94 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c8d0b61-14cd-46c8-b803-ee789087e6c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cms/TeamDiv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/static/cms/css/wakeo.css" beforeDir="false" afterPath="$PROJECT_DIR$/cms/static/cms/css/wakeo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/static/cms/js/allsite.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/static/cms/js/allsite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/cms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cms/templates/cms/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/cms/member_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cms/templates/cms/member_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/cms/team_member_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/cms/templates/cms/team_member_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/css/freelancer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/css/freelancer.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/gulpfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/img/avataaars.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/img/portfolio/cabin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/img/portfolio/cake.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/img/portfolio/circus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/img/portfolio/game.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/img/portfolio/safe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/img/portfolio/submarine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/js/contact_me.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/js/contact_me.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/js/freelancer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/js/freelancer.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/js/jqBootstrapValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/js/jqBootstrapValidation.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/mail/contact_me.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/base/_page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/base/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/components/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/components/_divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/freelancer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/layout/_contact.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/layout/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/layout/_masthead.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/layout/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/scss/layout/_portfolio.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/all.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/brands.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/brands.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/fontawesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/fontawesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/regular.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/regular.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/solid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/solid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/svg-with-js.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/svg-with-js.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/v4-shims.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/css/v4-shims.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery-easing/jquery.easing.compatibility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery-easing/jquery.easing.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery-easing/jquery.easing.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery/jquery.slim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/templates/top/vendor/jquery/jquery.slim.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/TeamDiv.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/TeamDiv.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,8 +108,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cms/TeamDiv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-303">
-              <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="297">
+              <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -475,12 +388,12 @@
       <workItem from="1580747299157" duration="706000" />
       <workItem from="1581237589037" duration="4206000" />
       <workItem from="1581383025191" duration="8595000" />
-      <workItem from="1581733974491" duration="42302000" />
+      <workItem from="1581733974491" duration="42758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194111000" />
+    <option name="totallyTimeSpent" value="194567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -812,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cms/TeamDiv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        <state relative-caret-position="297">
+          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>

@@ -26,13 +26,22 @@ class makeTeamDiv:
     def doTeamSet(self):
         self.teams.delete()
 
+        wk_team_count = 1
         # メンバー数を決める場合
         if self.case == "3":
             wk_team_count, self.mod = divmod(self.member_all_count, self.member_count)
-            self.team_count = wk_team_count + 1
+            if self.mod != 0:
+                self.team_count = wk_team_count + 1
+            else:
+                self.team_count = wk_team_count
+
         # ペアの場合
         elif self.case == "1":
             self.team_count, self.mod = divmod(self.member_all_count, 2)
+            if self.mod != 0:
+                self.team_count = wk_team_count + 1
+            else:
+                self.team_count = wk_team_count
 
         # チームを設定
         i = 0
