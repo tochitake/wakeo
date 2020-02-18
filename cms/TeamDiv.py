@@ -37,7 +37,7 @@ class makeTeamDiv:
 
         # ペアの場合
         elif self.case == "1":
-            self.team_count, self.mod = divmod(self.member_all_count, 2)
+            wk_team_count, self.mod = divmod(self.member_all_count, 2)
             if self.mod != 0:
                 self.team_count = wk_team_count + 1
             else:
