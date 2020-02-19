@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c8d0b61-14cd-46c8-b803-ee789087e6c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/cms/TeamDiv.py" beforeDir="false" afterPath="$PROJECT_DIR$/cms/TeamDiv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/wakeo2$wakeo.coverage" NAME="wakeo Coverage Results" MODIFIED="1582024054132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/wakeo2$wakeo.coverage" NAME="wakeo Coverage Results" MODIFIED="1582119072567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/wakeo2$views.coverage" NAME="views Coverage Results" MODIFIED="1569716924859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cms" />
   </component>
   <component name="DatabaseView">
@@ -108,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cms/TeamDiv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+            <state relative-caret-position="93">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -388,12 +389,12 @@
       <workItem from="1580747299157" duration="706000" />
       <workItem from="1581237589037" duration="4206000" />
       <workItem from="1581383025191" duration="8595000" />
-      <workItem from="1581733974491" duration="43174000" />
+      <workItem from="1581733974491" duration="45190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194983000" />
+    <option name="totallyTimeSpent" value="196999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -405,7 +406,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4433121" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35796177" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -725,8 +726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cms/TeamDiv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+        <state relative-caret-position="93">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>

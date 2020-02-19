@@ -81,7 +81,10 @@ class makeTeamDiv:
 
         #if cnt_diff == 0:
         j = self.setMtoT(self.members_mens, self.team_count)
-        self.setMtoT(self.members_womens, self.team_count, j+1)
+        if j == self.team_count:
+            j = 0
+
+        self.setMtoT(self.members_womens, self.team_count, j)
 
 
 #        else:
