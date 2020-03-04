@@ -38,8 +38,8 @@
 
     <h4 class="mt-4 border-bottom">チーム分けされたメンバーの一覧</h4>
     <!-- <a href="{% url 'cms:team_member_list' %}?S={{ S }}" class="btn btn-primary btn-sm my-3">シャッフル</a> -->
-    <input type="button" value="メンバー追加" onclick="addInputText();">
-    <a href="{% url 'cms:member_list' %}?S={{ S }}&case={{ case }}" class="btn btn-secondary btn-sm">戻る</a>
+    <input type="button" value="メンバー追加" onclick="addInputText();" class="btn btn-primary btn-sm my-3">
+    <a href="{% url 'cms:member_list' %}?S={{ S }}&case={{ case }}" class="btn btn-primary btn-sm my-3">戻る</a>
         <br/>
         <div id="app" class="container" cmanOMat="area">
             {% for team in teams %}

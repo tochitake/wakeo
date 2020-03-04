@@ -1,12 +1,14 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.list import ListView
-from django.http import HttpResponse, HttpResponseRedirect
-
+from django.views import generic
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseBadRequest, JsonResponse
+from django.urls import reverse_lazy
+from .forms import FileUploadForm, CSVUploadForm
 from cms.makeSerialCd import MakeRndCode
 from cms.TeamDiv import makeTeamDiv
 from cms.models import Member, attribute, Page, Team
 from cms.forms import MemberForm, attributeForm, PageForm
-import random
+import random, csv, io
 
 
 def page_create(request, page_id=None):
@@ -201,6 +203,44 @@ def team_member_list(request):
 
     return render(request, 'cms/team_member_list.html',
                   dict(members=members, teams=teams, S=serialCd, case=case, team_cnt=team_count, member_cnt=member_count))
+
+#CSVファイル取り込み
+class PostImport(generic.FormView):
+    template_name = 'cms/import.html'
+    success_url = reverse_lazy('cms:member_list')
+
+    form_class = CSVUploadForm
+
+    def form_valid(self, form):
+        csvfile = io.TextIOWrapper(form.cleaned_data['file'], encoding='utf_8_sig')
+        reader = csv.reader(csvfile)
+
+        self.success_url += '?S=' + self.request.GET.get("S")
+        for row in reader:
+            member, created = Member.objects.get_or_create(pk=row[0])
+            member.name = row[1]
+            member.div = row[2]
+            member.sex = row[3]
+            member.serialcd = self.request.GET.get("S")
+
+            member.save()
+
+        return super().form_valid(form)
+
+
+    #def get_context_data(self, **kwargs):
+    #    context = super().get_context_data(**kwargs)
+    #    context['S'] = self.kwargs.get('S')
+    #    return context
+
+
+
+def upload(request):
+    form = FileUploadForm(files=request.FILES)
+    if form.is_valid():
+        url = form.save()
+        return JsonResponse({'url':url})
+    return HttpResponseBadRequest()
 
 
 
